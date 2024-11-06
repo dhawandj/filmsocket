@@ -1,9 +1,9 @@
-name: Test Deploy to Hostinger
+name: Test Deploy to Hostinger with SFTP
 
 on:
   push:
     branches:
-      - main  # Test on the main branch
+      - main  # Only trigger on the main branch
 
 jobs:
   deploy:
@@ -13,17 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up FTP Deploy for Testing
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT || 21 }}
-          local-dir: ./  # The directory to upload
-          server-dir: /public_html/  # Ensure this path ends with a slash
-          exclude: |
-            *
-          include-only: |
-            test.txt
-          dry-run: false
+      - name: SFTP Deploy to Hostinger
+        uses: easingthemes/ssh-deploy@v2
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rltgoDzvO"  # Adjust as needed
+          SOURCE: "./test.txt"  # Path to the test file in your repo
+          REMOTE_HOST: ${{ secrets.FTP_HOST }}
+          REMOTE_USER: ${{ secrets.FTP_USERNAME }}
+          TARGET: "/public_html/"  # Destination path on your server
