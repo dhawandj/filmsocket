@@ -1,0 +1,27 @@
+name: Test Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main  # Test on the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up FTP Deploy for Testing
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT || 21 }}
+          local-dir: ./  # The directory to upload
+          server-dir: /public_html  # Update to your Hostinger root directory
+          include: |
+            test.txt
+          dry-run: false
