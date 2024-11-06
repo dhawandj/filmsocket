@@ -21,7 +21,9 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT || 21 }}
           local-dir: ./  # The directory to upload
-          server-dir: /public_html  # Update to your Hostinger root directory
-          include: |
+          server-dir: /public_html/  # Ensure this path ends with a slash
+          exclude: |
+            *
+          include-only: |
             test.txt
           dry-run: false
