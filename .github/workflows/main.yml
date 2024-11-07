@@ -1,20 +1,69 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
+
 jobs:
-  Explore-GitHub-Actions:
+  build:
+    name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - name: make new dir
-        run: mkdir REDDY
-      - name: Check out repository code
-        uses: actions/checkout@v4
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Execute remote SSH commands
+        uses: appleboy/ssh-action@v1.1.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          port: ${{ secrets.SSH_PORT }}
+          envs: envkey=${{ secrets.envkey }}
+          script: |
+            set -e  # Exit if a command fails
+            
+            echo 'Starting SSH commands execution on the remote server...'
+            
+            # Navigate to the project directory
+            cd domains/filmsocket.com || exit 1
+            
+            # Check if the repository is already cloned, else clone it
+            if [ -d "myfiles/.git" ]; then
+              echo "Repository found, pulling latest changes..."
+              cd myfiles
+              git fetch origin main
+              git reset --hard origin/main
+            else
+              echo "Cloning the repository..."
+              git clone https://github.com/dhawandj/dj.git myfiles
+              cd myfiles
+
+              # Install PHP dependencies
+              echo "Installing PHP dependencies..."
+              composer install --no-interaction --prefer-dist --optimize-autoloader
+              
+              # Decrypt the .env file if necessary
+              # php artisan env:decrypt --key=${{ secrets.envkey }}
+              php artisan env:decrypt --key="${envkey}"
+
+              # Run Laravel setup (optional commands)
+              echo "Running Laravel setup..."
+              # Uncomment the lines below if needed:
+              php artisan migrate:fresh --force
+              php artisan cache:clear
+              php artisan config:cache
+              php artisan route:cache
+              
+            fi
+            
+            # Display directory contents for confirmation
+            echo "Current files in $(pwd):"
+            ls -la
+
+            # Install PHP dependencies
+            echo "Installing PHP dependencies..."
+            composer install --no-interaction --prefer-dist --optimize-autoloader
+            
+            # Run Laravel setup (optional commands)
+            echo "Running Laravel setup..."
+            # Uncomment the lines below if needed:
+            # php artisan migrate --force
+            # php artisan cache:clear
+            # php artisan config:cache
+            # php artisan route:cache
+            
+            echo "Deployment completed successfully!"
