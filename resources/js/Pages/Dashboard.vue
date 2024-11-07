@@ -32,9 +32,10 @@ import { Head } from '@inertiajs/vue3';
                     >
                         <span class="text-red-500"> filmsocket </span>
                         <span class="text-yellow-400">
-                            connect all the film makers reddy
+                            connect all the filmmakers reddy
                         </span>
-                        <p>Comming soon</p>
+                        <p>Comming soon...</p>
+                        <p>filmtrading alo comming soon</p>
                     </div>
                 </div>
             </div>
