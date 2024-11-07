@@ -36,6 +36,7 @@ import { Head } from '@inertiajs/vue3';
                         </span>
                         <p>Comming soon...</p>
                         <p>filmtrading alo comming soon</p>
+                        <p>hey i change yml file</p>
                     </div>
                 </div>
             </div>
