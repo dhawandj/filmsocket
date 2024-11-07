@@ -17,7 +17,7 @@ jobs:
           envs: envkey=${{ secrets.envkey }}
           script: |
             echo " printign envkey demo"
-            echo  ${{env.envkey}}
+            echo  "${{env.envkey}} hell0 this env key "
             set -e  # Exit if a command fails
             
             echo 'Starting SSH commands execution on the remote server...'
