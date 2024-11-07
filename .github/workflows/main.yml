@@ -29,8 +29,9 @@ jobs:
             if [ -d "myfiles/.git" ]; then
               echo "Repository found, pulling latest changes..."
               cd myfiles
-              git fetch origin main
-              git reset --hard origin/main
+              git pull
+              # git fetch origin main
+              # git reset --hard origin/main
             else
               echo "Cloning the repository..."
               git clone https://github.com/dhawandj/filmsocket.git myfiles
