@@ -37,9 +37,25 @@ import { Head } from '@inertiajs/vue3';
                         <p>Comming soon...</p>
                         <p>filmtrading alo comming soon</p>
                         <p>hey i change yml file</p>
+                        <Button label="pre-production" />
+                        <InputText type="text" v-model="value" />
                     </div>
+                    <Card>
+                        <template #title>Simple Card</template>
+                        <template #content>
+                            <p class="m-0">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Inventore sed consequuntur
+                                error repudiandae numquam deserunt quisquam
+                                repellat libero asperiores earum nam nobis,
+                                culpa ratione quam perferendis esse, cupiditate
+                                neque quas!
+                            </p>
+                        </template>
+                    </Card>
                 </div>
             </div>
         </div>
     </AuthenticatedLayout>
 </template>
+<style></style>

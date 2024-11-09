@@ -3,6 +3,7 @@
         "baseUrl": ".",
         "paths": {
             "@/*": ["resources/js/*"],
+            // "@images/*": ["resources/images/*"], // Add this line
             "ziggy-js": ["./vendor/tightenco/ziggy"]
         }
     },
