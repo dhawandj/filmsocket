@@ -1,8 +1,8 @@
 <script setup>
-import imgUrl from './../../images/camera2.png';
+import imgUrl from './../../images/camera2.png'
 </script>
 <template>
-    <main class="overflow-aut h-svh space-y-2 borde border-red-500 p-3">
+    <main class="overflow-aut h-svh space-y-2 max-w-7xl mx-auto  borde border-red-500 p-3">
         <nav class="rounded-md border text-textPrimary  border-zinc-600 p-2 text-center"> filmsocket.com</nav>
         <section class="flex h-[93%] ">
             <!-- body-section -->
@@ -10,15 +10,15 @@ import imgUrl from './../../images/camera2.png';
                 <!-- box-1 -->
                 <div class="relative h-1/2 rounded-md borde border-secondary  bg-zinc-900">
                     <img
-                    class="borde absolute right-2 top-0 h-full w-1/3 object-cover object-bottom"
+                    class="borde absolute right-2 top-0 h-full w-[25%] object-cover object-bottom"
                         :src="imgUrl"
                         alt="camera image"
                     />
-                    <div class="absolute bottom-10 left-20 space-x-20">
+                    <div class="absolute bottom-10 left-10 space-x-20  ">
                         <button class="borde rounded-md bg-secondaryAlt px-3 py-2 font-mono text-secondary transition-all duration-300 hover:bg-textPrimary hover:text-secondaryAlt">What you Have</button>
-                        <button class="borde rounded-md bg-secondaryAlt px-3 py-2 font-mono text-secondary transition-all duration-300 hover:bg-textPrimary hover:text-secondaryAlt">What you Want</button>
+                        <button class="borde rounded-md   bg-secondaryAlt px-3 py-2 font-mono text-secondary transition-all duration-300 hover:bg-textPrimary hover:text-secondaryAlt">What you Want.</button>
                     </div>
-                    <p class="absolute left-48 top-24 text-2xl"> I am <span class="text-yellow-500">Director</span>  </p>
+                    <p class="absolute left-40 top-20 text-2xl"> I am <span class="text-yellow-500">Director</span>  </p>
                 </div>
                 <!-- box-2 -->
                 <div class="grid h-[45%] grid-cols-3 gap-2 p-">
@@ -53,4 +53,16 @@ main {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
         'Liberation Mono', 'Courier New', monospace;
 }
+/* Global unselectable text
+* {
+  user-select: none;
+} */
+
+/* ::selection {
+  background-color: #3399ff;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+} */
+
+
 </style>
