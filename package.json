@@ -4,6 +4,7 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
+        "serve": "php artisan serve & npm run dev",
         "lint": "eslint resources/js --ext .js,.vue --ignore-path .gitignore --fix"
     },
     "devDependencies": {

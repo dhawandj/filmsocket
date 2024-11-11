@@ -14,7 +14,7 @@ import imgUrl from './../../images/camera2.png'
                         :src="imgUrl"
                         alt="camera image"
                     />
-                    <div class="absolute bottom-10 left-10 space-x-20  ">
+                    <div class="absolute bottom-[10%] left-10 space-x-20  ">
                         <button class="borde rounded-md bg-secondaryAlt px-3 py-2 font-mono text-secondary transition-all duration-300 hover:bg-textPrimary hover:text-secondaryAlt">What you Have</button>
                         <button class="borde rounded-md   bg-secondaryAlt px-3 py-2 font-mono text-secondary transition-all duration-300 hover:bg-textPrimary hover:text-secondaryAlt">What you Want.</button>
                     </div>

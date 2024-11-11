@@ -1,0 +1,1 @@
+main{display:grid;grid-template-areas:"topbar topbar" "content sidbar" "footer footer";grid-template-columns:5fr 1fr;grid-template-rows:auto 1fr auto;gap:10px}.topbar{grid-area:topbar}.sidebar{grid-area:sidbar}.content{grid-area:content}.footer{grid-area:footer}@media (max-width: 1024px){main{display:grid;grid-template-areas:"topbar" "content" "sidbar" "footer"}}
