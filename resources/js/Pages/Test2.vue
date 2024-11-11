@@ -8,10 +8,11 @@ import imgUrl from './../../images/camera2.png';
           <span>filmsocket.com</span>  
           <span class="text-sm">◉❖</span>
         </nav>
-        <section class="borde border-secondary relative  bg-[#090C11]  mx-2 rounded-sm min-h-[30%] overflow-hidden">
-                <img class="h-[130%] w-full object-contain absolute bottom-0 -right-7 z-0  object-right   borde "   :src="imgUrl" alt="">
-                <button class="borde absolute bottom-5 left-2 text-textPrimary rounded-md   text-xs p-2 bg-secondaryAlt">what you want</button>
-                <button class="borde absolute bottom-5 left-32   text-textPrimary rounded-md   text-xs p-2 bg-secondaryAlt">what you have</button>
+        <section class="borde border-secondary relative  bg-[#090C11]  mx-2 rounded-md min-h-[30%] overflow-hidden">
+                <img class="h-[120%] w-full object-contain absolute bottom-0 -right-7 z-0  object-right   borde "   :src="imgUrl" alt="">
+                <button class="borde absolute bottom-5 left-2 text-secondary rounded-md   text-xs p-2 bg-secondaryAlt">what you want</button>
+                <button class="borde absolute bottom-5 left-32   text-secondary rounded-md   text-xs p-2 bg-secondaryAlt">what you have</button>
+                <p class="absolute left-10 top-[40%] text-sm">i am <span class="text-yellow-400">director</span></p>
         </section>
         <nav class="text mx-2 mt-2 rounded-sm border border-secondary p-1 text-center text-sm">
             filmsocket.com
