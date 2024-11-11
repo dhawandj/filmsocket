@@ -26,6 +26,56 @@ import imgUrl from './../../images/camera2.png';
                 <div>comming soon..</div>
                 <div>comming soon..</div>
                 <div>comming soon..</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
+                <div>commig soom</div>
         </div>
         </main>
 </template>
