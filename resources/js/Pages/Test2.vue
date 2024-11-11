@@ -3,7 +3,7 @@ import imgUrl from './../../images/camera2.png';
 
 </script>
 <template>
-    <main class="h-svh border border-red-500 space-y-3 overflow-y-scroll">
+    <main class="h-svh borde border-red-500 space-y-3 ">
         <nav class="text mx-2 mt-2 rounded-sm border border-secondary p-2 text-center text-xs">
             filmsocket.com
         </nav>
