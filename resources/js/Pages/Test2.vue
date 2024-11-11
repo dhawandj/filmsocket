@@ -4,7 +4,7 @@ import imgUrl from './../../images/camera2.png';
 </script>
 <template>
     <main class="h-svh borde border-red-500 space-y-3 overflow-y-scroll ">
-        <nav class=" sticky top-0 flex justify-between  bg-secondaryAlt text-textPrimary z-50 text mx-1 mt-2 rounded-sm borde border-secondary shadow-2xl  p-3 text-center text-xs">
+        <nav class=" sticky top-0 flex justify-between  bg-secondaryAlt text-textPrimary z-50 text mx1 mt-2 rounded-sm borde border-secondary shadow-2xl  p-3 text-center ">
           <span>filmsocket.com</span>  
           <span class="text-sm">◉❖</span>
         </nav>
