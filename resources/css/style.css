@@ -2,6 +2,7 @@ html {
     background-color: #323437;
 }
 
-body {
-    font-family: 'Roboto Mono';
+main {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        'Liberation Mono', 'Courier New', monospace;
 }
