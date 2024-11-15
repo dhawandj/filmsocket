@@ -1,0 +1,1 @@
+import{o as e,c as o,w as r,r as s,$ as t}from"./app-C2rJ6MOh.js";import{_ as n}from"./_plugin-vue_export-helper-DlAUqK2U.js";const c={};function i(a,p,f,_,d,l){return e(),o(t,{name:"slide-fade",appear:""},{default:r(()=>[s(a.$slots,"default")]),_:3})}const u=n(c,[["render",i]]);export{u as M};
