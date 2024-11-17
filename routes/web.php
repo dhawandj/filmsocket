@@ -41,3 +41,23 @@ Route::prefix('film-making')->group(function () {
         return Inertia::render('PreProduction');
     })->name('preproduction');
 });
+
+Route::get('/fileUpload', function () {
+    // Storage::disk('local')->put('example.txt', 'Contents');
+    // dd(env('FILESYSTEM_DISK'));
+    // ini_set('post_max_size',"80M");
+    // dd(ini_get('post_max_size'));
+    // dd(phpinfo());
+    
+    return Inertia::render('FileUpload');
+})->name('fileUpload');
+
+Route::post('/upload', function () {
+    // dd(get_class_methods(request()->file('avatar')));
+    // request()->file('avatar')->store('avatars');
+    // dd(request()->file('avatars'));
+    foreach (request()->file('avatars') as $file) {
+        $path = $file->store('avatars', 'public'); // Store in "storage/app/public/avatars"
+    }
+    return back();
+})->name('upload');
